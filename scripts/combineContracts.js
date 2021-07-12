@@ -63,7 +63,7 @@ function toOneFile (contractId) {
         }
 
         const pragma = contracts[contractId].source.match(PRAGMA_REGEX)[0];
-        sources = DESCRIPTION + pragma + sources;
+        sources = pragma + sources; // DESCRIPTION + pragma + sources;
     }
 
     const destFilename = DESTINATION_DIR + contract.contractName + '.sol';
